@@ -10,10 +10,25 @@ import { useDispatch } from "react-redux";
 import { setWeather, setDaysWeather, setLoading } from "../../store/slices/weather";
 import {useGetLocationQuery, useGetCurrentWeatherQuery, useGetFiveDayForecastQuery} from '../../api/weatherApi';
 
+const defaultCurrentWeather= {
+    "Version": 1,
+    "Key": "215793",
+    "Type": "City",
+    "Rank": 95,
+    "LocalizedName": "Tel-aviv Port",
+    "Country": {
+      "ID": "IL",
+      "LocalizedName": "Israel"
+    },
+    "AdministrativeArea": {
+      "ID": "TA",
+      "LocalizedName": "Tel Aviv"
+    }
+  }
 const Input = () => {
   const dispatch = useDispatch();
   
-  const [key, setKey] = useState('');
+  const [key, setKey] = useState(defaultCurrentWeather);
   const [value, setVal] = useState("");
   const setValue = _.debounce(setVal, 300)
   const {data:locations = []} = useGetLocationQuery(value);
