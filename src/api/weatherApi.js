@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 const API= 'gdwoaNtBsfRUJyXr4GHGgBLDf5vVyB07';
 export const weatherApi = createApi({
   reducerPath: 'weatherApi',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://dataservice.accuweather.com' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://dataservice.accuweather.com' }),
   endpoints: (builder) => ({
     getCurrentWeather: builder.query({
       query: (city) => `/currentconditions/v1/${city}?apikey=${API}`,
