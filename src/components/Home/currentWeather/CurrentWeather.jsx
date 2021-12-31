@@ -3,7 +3,7 @@ import { Box, Card, Typography, Button } from "@mui/material";
 import { useStyles } from "./style";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, deleteFavorite } from "../../../store/slices/favorites";
-import { dayNames, monthsNames } from "./const";
+import { dayNames, monthsNames } from '../const';
 
 const CurrentWeatherItem = () => {
   const weather = useSelector((state) => {
@@ -26,6 +26,7 @@ const CurrentWeatherItem = () => {
     dispatch(addFavorite(weather.currentWeather));
   };
   const classes = useStyles();
+
   return (
     <Card className={classes.wrapper}>
       <Box className={classes.box1}>

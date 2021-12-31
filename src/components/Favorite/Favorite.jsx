@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Box, Paper } from '@mui/material';
+import { Box} from '@mui/material';
 import FavoriteItem from './FavoriteItem';
 
 const Favorite = () => {
@@ -19,8 +19,9 @@ const Favorite = () => {
             justifyItems:'center',
             backgroundColor:'#272730'
         }}>
-            {favorites.map((item) => {
+            {favorites.map((item, i) => {
                 return <FavoriteItem 
+                key={i}
                 city={item.city} 
                 temperature={item.temperature}
                 icon={item.icon}/>

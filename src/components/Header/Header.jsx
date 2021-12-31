@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {Box, AppBar, Toolbar, Typography, Button } from '@mui/material';
@@ -6,9 +5,10 @@ import {Box, AppBar, Toolbar, Typography, Button } from '@mui/material';
 
 
 const Header = () => {
+  
   return (
     <Box sx={{ flexGrow: 1}}>
-    <AppBar sx={{ backgroundColor:'#232329' }} position="static">
+    <AppBar sx={{backgroundColor:'#232329'}} position="static">
       <Toolbar sx={{ 
       display:'grid',
       gridTemplateColumns:'70% 15% 15%'}} >

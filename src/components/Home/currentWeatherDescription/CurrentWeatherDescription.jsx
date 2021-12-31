@@ -14,8 +14,6 @@ const CurrentWeatherDescription = () => {
             display:'grid',
             gridTemplateRows:'40% 60%',
             alignItems:'center'
-           
-            
         }}>
             <CurrentWeatherDescriptionItem 
             minTemp={weather.currentWeather.minTemp}

@@ -18,6 +18,12 @@ export const useStyles = makeStyles({
         display: "grid",
         gridTemplateColumns: "37% 57%",
         gap:'3%'
-    }
+    },
+    inputRoot: {
+        border: "1px solid white",
+        backgroundColor:'white',
+        height:'55px',
+        boxSizing:'border-box'
+      }
 })
    

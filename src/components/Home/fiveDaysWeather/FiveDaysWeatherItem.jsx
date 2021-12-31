@@ -1,6 +1,6 @@
 import { Card, CardMedia, Typography } from "@mui/material";
 import React from "react";
-import { dayNames } from "./const";
+import { dayNamesShort } from '../const';
 import { useStyles } from './style';
 
 const FiveDaysWeatherItem = ({ day, temp, icon }) => {
@@ -14,7 +14,7 @@ const FiveDaysWeatherItem = ({ day, temp, icon }) => {
         .padStart(2, "0")}-s.png`}
       />
       <Typography color="white" fontSize="15px" fontWeight="700">
-        {dayNames[day]}
+        {dayNamesShort[day]}
       </Typography>
       <Typography color="white" fontSize="20px" fontWeight="700">
         {Math.round(temp)}

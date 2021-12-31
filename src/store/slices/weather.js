@@ -10,9 +10,7 @@ const initialState = {
     dayTime:'',
     nightTime:''
   },
-  days:[
-
-  ],
+  days:[],
   loading:'success'
 };
 
