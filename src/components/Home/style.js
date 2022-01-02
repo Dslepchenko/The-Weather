@@ -4,7 +4,7 @@ export const useStyles = makeStyles({
     paper:{
         backgroundColor: "#313741",
         width: "100%",
-        height: "670px",
+        minHeight: "670px",
         display: "grid",
         gridTemplateRows:'20% 80%',
        justifyItems:'center'
@@ -17,7 +17,13 @@ export const useStyles = makeStyles({
         borderRadius: "20px",
         display: "grid",
         gridTemplateColumns: "37% 57%",
-        gap:'3%'
+        gap:'3%',
+        '@media (max-width: 1100px)' : {
+            width: '80%',
+            gridTemplateColumns:'100%',
+            gridTemplateRows:'50% 50%',
+            minHeight:'1000px'
+          }
     },
     inputRoot: {
         border: "1px solid white",
