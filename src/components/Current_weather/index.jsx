@@ -2,8 +2,8 @@ import React from "react";
 import { Box, Card, Typography, Button } from "@mui/material";
 import { useStyles } from "./style";
 import { useSelector, useDispatch } from "react-redux";
-import { addFavorite, deleteFavorite } from "../../../store/slices/favorites";
-import { dayNames, monthsNames } from '../const';
+import { addFavorite, deleteFavorite } from "../../store/slices/favorites";
+import { dayNames, monthsNames } from '../../const';
 
 const CurrentWeatherItem = () => {
   const weather = useSelector((state) => {

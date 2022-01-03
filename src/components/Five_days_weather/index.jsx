@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import React from "react";
-import FiveDaysWeatherItem from "./FiveDaysWeatherItem";
+import FiveDaysWeatherItem from "../Five_days_weather_item";
 import { useSelector } from "react-redux";
 import { useStyles } from "./style";
 

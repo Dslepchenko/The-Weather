@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import Home from './components/Home/Home.jsx';
-import Favorite from './components/Favorite/Favorite';
+import Home from './components/Home/index.jsx';
+import Favorite from './components/Favorite_weather';
 import Header from './components/Header/Header';
 
 

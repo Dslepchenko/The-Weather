@@ -3,8 +3,8 @@ import React, { useState, useEffect } from "react";
 import _ from "lodash";
 import { useDispatch } from "react-redux";
 import { setWeather,setDaysWeather} from "../../store/slices/weather";
-import {defaultCurrentWeather} from './const'
-import CircularIndeterminate from '../Spinner'
+import {defaultCurrentWeather} from '../../const'
+import CircularIndeterminate from '../Spinner/Spinner'
 import {useGetLocationQuery, useGetCurrentWeatherQuery,useGetFiveDayForecastQuery} from "../../api/weatherApi";
 import { useStyles } from "./style";
 

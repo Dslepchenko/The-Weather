@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box} from '@mui/material';
-import CurrentWeatherDescriptionItem from './CurrentWeatherDescriptionItem'
-import FiveDaysWeather from '../fiveDaysWeather/FiveDaysWeather'
+import CurrentWeatherDescriptionItem from '../Current_weather_description_item'
+import FiveDaysWeather from '../Five_days_weather'
 import { useSelector } from 'react-redux';
 
 const CurrentWeatherDescription = () => {
@@ -13,7 +13,21 @@ const CurrentWeatherDescription = () => {
         <Box sx={{
             display:'grid',
             gridTemplateRows:'40% 60%',
-            alignItems:'center'
+            alignItems:'center',
+            justifyItems:'center',
+            padding:'20px',
+            '@media (max-width: 1100px)' : {
+                width:'95%',
+                height:'80%',
+                justifySelf:'center',
+                alignSelf:'center',
+                gap:'10px',
+              },
+              '@media (max-width: 768px)' : {
+                gridTemplateRows:'40% 55%',
+                gap:'0px'
+              },
+              
         }}>
             <CurrentWeatherDescriptionItem 
             minTemp={weather.currentWeather.minTemp}

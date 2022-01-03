@@ -1,7 +1,7 @@
 import { Card, CardMedia, Typography } from "@mui/material";
 import React from "react";
-import { dayNamesShort } from '../const';
-import { useStyles } from './style';
+import { dayNamesShort } from '../../const';
+import { useStyles } from '../Five_days_weather/style';
 
 const FiveDaysWeatherItem = ({ day, temp, icon }) => {
   const classes = useStyles();
