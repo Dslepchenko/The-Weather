@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Box} from '@mui/material';
-import FavoriteItem from '../Favorite_weather_item/FavoriteItem';
+import FavoriteItem from '../Favorite_weather_item';
 
 const Favorite = () => {
     const favorites = useSelector((state)=>{

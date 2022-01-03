@@ -3,7 +3,7 @@ import { useStyles } from "../Input/style";
 import React from "react";
 import CurrentWeatherItem from "../Current_weather";
 import CurrentWeatherDescription from "../Current_weather_description";
-import Input from '../Input/Input';
+import Input from '../Input/index.';
 
 const Home = () => {
   const classes = useStyles();
