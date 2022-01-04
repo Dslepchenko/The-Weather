@@ -9,7 +9,7 @@ export const useStyles = makeStyles({
         gridTemplateRows:'20% 80%',
         justifyItems:'center',
         alignItems:'flex-start',
-        height:'800px'
+        height:'1000px'
       }
 })
    
