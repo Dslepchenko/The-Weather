@@ -1,26 +1,42 @@
-import { Card, CardMedia, Typography } from "@mui/material";
+import { Grid, CardMedia, Typography } from "@mui/material";
 import React from "react";
 import { dayNamesShort } from '../../const';
-import { useStyles } from '../Five_days_weather/style';
+
 
 const FiveDaysWeatherItem = ({ day, temp, icon }) => {
-  const classes = useStyles();
+
   return (
-    <Card className={classes.card}>
-      <CardMedia
-        component="img"
-        height="60px"
-        image={`https://developer.accuweather.com/sites/default/files/${String(icon)
-        .padStart(2, "0")}-s.png`}
-      />
-      <Typography color="white" fontSize="15px" fontWeight="700">
-        {dayNamesShort[day]}
-      </Typography>
-      <Typography color="white" fontSize="20px" fontWeight="700">
-        {Math.round(temp)}
-        {` °C`}
-      </Typography>
-    </Card>
+    <Grid container maxHeight='200px'
+    minHeight='147px'
+      alignContent='stretch'
+      flexDirection='column'
+      justifyContent='space-around'
+      alignItems='center'
+      xs={12} >
+
+      <Grid item>
+        <CardMedia
+          component="img"
+          height="60px"
+          image={`https://developer.accuweather.com/sites/default/files/${String(icon)
+            .padStart(2, "0")}-s.png`}
+        />
+      </Grid>
+
+      <Grid item>
+        <Typography color="white" variant="h6" fontWeight="700">
+          {dayNamesShort[day]}
+        </Typography>
+      </Grid>
+
+      <Grid item>
+        <Typography color="white" variant="h6" fontWeight="700">
+          {Math.round(temp)}
+          {` °C`}
+        </Typography>
+      </Grid>
+
+      </Grid>
   );
 };
 

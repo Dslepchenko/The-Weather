@@ -1,5 +1,5 @@
-import { Paper, Box } from "@mui/material";
-import { useStyles } from "../Input/style";
+import { Paper, Grid, Container } from "@mui/material";
+import { useStyles } from "./style";
 import React from "react";
 import CurrentWeatherItem from "../Current_weather";
 import CurrentWeatherDescription from "../Current_weather_description";
@@ -11,10 +11,18 @@ const Home = () => {
   return (
     <Paper className={classes.paper}>
       <Input />
-      <Box className={classes.box}>
+
+      <Container fixed> 
+        <Grid container spacing={1} justifyContent='center'>
+        <Grid item xs={12} md={4} lg={4}>
         <CurrentWeatherItem />
+        </Grid>
+        <Grid item xs={12} md={6} lg={6}>
         <CurrentWeatherDescription />
-      </Box>
+        </Grid>
+        </Grid>
+      </Container>
+      
     </Paper>
   );
 };

@@ -44,37 +44,27 @@ const Input = () => {
       console.error(e.message);
     }
     dispatch(
-      setDaysWeather({
-        days: fiveDaysForecast.DailyForecasts,
-      })
-    );
+      setDaysWeather({days: fiveDaysForecast.DailyForecasts}));
   }, [currentWeather, fiveDaysForecast, dispatch, key.LocalizedName]);
 
   return (
     <>
     <Autocomplete
     className={classes.inputRoot}
-      sx={{
-        width: "400px",
-        marginTop: "30px",
-      }}
       options={locations}
+
       getOptionLabel={(option) => {
         return option.LocalizedName;
       }}
+
       renderOption={(props, option) => {
         return (
-          <span
-            onClick={() => {
-              console.log(option);
-            }}
-            {...props}
-            key={option.Key}
-          >
+          <span {...props} key={option.Key}>
             {option.LocalizedName},{option.Country.LocalizedName}
           </span>
         );
       }}
+      
       renderInput={(params) => (
         <TextField
           {...params}
@@ -83,6 +73,7 @@ const Input = () => {
           }}
         />
       )}
+      
       onChange={(e, val) => {
         if (!val) {
           return;

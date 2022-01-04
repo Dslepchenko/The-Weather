@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, Typography, Button } from "@mui/material";
+import { Typography, Button, Grid} from "@mui/material";
 import { useStyles } from "./style";
 import { useSelector, useDispatch } from "react-redux";
 import { addFavorite, deleteFavorite } from "../../store/slices/favorites";
@@ -28,35 +28,51 @@ const CurrentWeatherItem = () => {
   const classes = useStyles();
 
   return (
-    <Card className={classes.wrapper}>
-      <Box className={classes.box1}>
+    <Grid  className={classes.wrapper} flexGrow={1} container justifyContent='center' >
+
+      <Grid item xs={12} alignSelf='end'>
         <Button
           className={classes.btnFavorite}
           onClick={isFavorite ? deleteFromFavorite : addToFavorite}
         >
           {isFavorite ? "Remove" : "Add to Favorite"}
         </Button>
+        </Grid>
+
+        <Grid  item xs={12} marginLeft='20px' alignSelf='end'>
         <Typography component='div' variant="h4" className={classes.dayValue}>
           {dayNames[new Date(weather.currentWeather.day).getDay()]}
         </Typography>
+        </Grid>
+
+        <Grid item xs={12} marginLeft='20px' alignSelf='normal'>
         <Typography component='div' variant="h6" color="white">
           {monthsNames[new Date(weather.currentWeather.day).getMonth()]}
           {new Date(weather.currentWeather.day).getDate()}
         </Typography>
-        <Typography component='div' variant="h7" color="white">
+        </Grid>
+
+        <Grid item xs={12} marginLeft='20px'alignSelf='normal' >
+        <Typography component='div' variant="h5" color="white">
           {weather.currentWeather.city}
         </Typography>
-      </Box>
-      <Box className={classes.box2}>
+        </Grid>
+
+        <Grid item xs={12} marginLeft='20px' alignSelf='end'>
         <Typography component='div'variant="h4" fontWeight="700" color="white">
           {weather.currentWeather.temperature}
           {` °C`}
         </Typography>
+        </Grid>
+        
+        <Grid item xs={12} marginLeft='20px'>
         <Typography component='div' variant="h4" color="white">
           {weather.currentWeather.description}
         </Typography>
-      </Box>
-    </Card>
+        </Grid>
+   
+   
+    </Grid>
   );
 };
 

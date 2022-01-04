@@ -2,15 +2,12 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles({
   wrapper: {
-    width: "90%",
+    width: "100%",
     backgroundImage: "url(/mountain.jpg)",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
-    display: "grid",
-    gridTemplateRows: "50% 30%",
-    gap: "20%",
-    padding: "20px",
     borderRadius: "20px",
+    minHeight:'400px'
   },
   box1: {
     display: "grid",
@@ -23,6 +20,8 @@ export const useStyles = makeStyles({
     color: "white",
     maxWidth: "90%",
     border: "0.05px solid white",
+    marginLeft:'20px',
+    alignSelf:'flex-end'
   },
   dayValue: {
     color: "white",

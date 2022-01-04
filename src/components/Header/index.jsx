@@ -1,41 +1,43 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import {Box, AppBar, Toolbar, Typography, Button } from '@mui/material';
-
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  Box,
+  Typography,
+  Button,
+  AppBar,
+  Container,
+  Toolbar,
+} from "@mui/material";
 
 
 const Header = () => {
-  
+ 
   return (
-    <Box sx={{ flexGrow: 1}}>
-    <AppBar sx={{backgroundColor:'#232329'}} position="static">
-      <Toolbar sx={{ 
-      display:'grid',
-      gridTemplateColumns:'70% 15% 15%'}} >
-        <Typography sx={{justifySelf:'start'}} variant="h4" component="div">
-          The Weather App
-        </Typography>
-        <Button sx={{
-          width:'120px',
-          borderRadius:'10px',
-          border:'1px solid white'
-        }}><Link style={{
-          textDecoration:'none',
-          color:'white'
-        }} to = '/'>Home</Link></Button>
-        <Button sx={{
-          width:'120px',
-          borderRadius:'10px',
-          border:'1px solid white',
-          textDecoration:'none'
-        }}><Link style={{
-          textDecoration:'none',
-          color:'white'
-        }} to = '/favorite'>Favorite</Link></Button>
-      </Toolbar>
+    <AppBar style={{backgroundColor:'#232329'}} >
+      <Container maxWidth='lg'>
+        <Toolbar >
+          
+          <Typography variant="h6" flexGrow={1}>Weather APP</Typography>
+          <Box mr={3}>
+            <Link style={{ textDecoration: 'none', color:'white' }} to="/">
+              <Button color="inherit" variant="outlined">
+                Home
+              </Button>
+            </Link>
+          </Box>
+
+          <Box  mr={3}>
+            <Link style={{ textDecoration: 'none', color:'white' }} to="/favorite">
+              <Button color="inherit" variant="outlined">
+                Favorite
+              </Button>
+            </Link>
+          </Box>
+
+        </Toolbar>
+      </Container>
     </AppBar>
-  </Box>
-  )
+  );
 };
 
 export default Header;

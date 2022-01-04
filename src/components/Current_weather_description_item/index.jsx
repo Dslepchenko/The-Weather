@@ -1,38 +1,66 @@
 import React from "react";
-import { Box, Typography} from "@mui/material";
+import { Box, Typography, Grid} from "@mui/material";
 import { useStyles } from "./style";
-
+import FiveDaysWeather from "../Five_days_weather";
 const CurrentWeatherDescriptionItem = ({minTemp,maxTemp,dayForecast,nightForecast,}) => {
   const classes = useStyles();
   
   return (
     <Box className={classes.boxWrapper}>
-      <Box className={classes.boxItem}>
-        <Typography sx={{'@media (max-width: 1100px)':{fontVariant:'h7'} }} component='div' variant="h6">Min Temp</Typography>
-        <Typography component='div' variant="h6" className={classes.typografy}>
-          {minTemp}
-          {` °C`}
-        </Typography>
-      </Box>
-      <Box className={classes.boxItem}>
-        <Typography component='div' variant="h6">Max Temp</Typography>
-        <Typography  component='div' variant="h6" className={classes.typografy}>
-          {maxTemp}
-          {` °C`}
-        </Typography>
-      </Box>
-      <Box className={classes.boxItem}>
-        <Typography sx={{'@media (max-width: 1100px)':{fontVariant:'h7'} }} component='div' variant="h7">Day forecast</Typography>
-        <Typography sx={{'@media (max-width: 1100px)':{fontVariant:'h7'} }} component='div' variant="h7" className={classes.typografy}>
-          {dayForecast}
-        </Typography>
-      </Box>
-      <Box className={classes.boxItem}>
-        <Typography sx={{'@media (max-width: 1100px)':{fontVariant:'h7'} }} component='div' variant="h7">Night forecast</Typography>
-        <Typography sx={{'@media (max-width: 1100px)':{fontVariant:'h7'} }} component='div' variant="h7" className={classes.typografy}>
-          {nightForecast}
-        </Typography>
-      </Box>
+       <Grid container>
+      <Grid item xs={12} justifyItems='center' margin="20px 20px 20px 20px">
+
+          <Grid container >
+            <Grid item xs={6}>
+              <Typography color='white' variant="h6" >Min Temp</Typography>
+            </Grid>
+            <Grid item xs={6}  textAlign='end' >
+              <Typography color='white' variant="h6">
+                {minTemp}
+                {` °C`}
+              </Typography>
+            </Grid>
+          </Grid>
+       
+          <Grid container>
+            <Grid item xs={6}>
+              <Typography color='white' variant="h6">Max Temp</Typography></Grid>
+            <Grid item xs={6}>
+              <Typography color='white' textAlign='end' variant="h6">
+                {maxTemp}
+                {` °C`}
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid container>
+            <Grid item xs={6}>
+              <Typography color='white' variant="h6">Day forecast</Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography color='white' textAlign='end' variant="h6">
+                {dayForecast}
+              </Typography>
+            </Grid>
+          </Grid>
+
+          <Grid container>
+            <Grid item xs={6}>
+              <Typography color='white' variant="h6">Night forecast</Typography>
+            </Grid>
+            <Grid item xs={6}>
+              <Typography color='white' textAlign='end' variant="h6">
+                {nightForecast}
+              </Typography>
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+
+      <Grid item xs={12} justifyItems='center' margin="20px 20px 20px 20px">
+        <FiveDaysWeather />
+      </Grid>
+
     </Box>
   );
 };
