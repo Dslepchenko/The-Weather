@@ -11,10 +11,9 @@ const FiveDaysWeatherItem = ({ day, temp, icon }) => {
       alignContent='stretch'
       flexDirection='column'
       justifyContent='space-around'
-      alignItems='center'
-      xs={12} >
+      alignItems='center' >
 
-      <Grid item>
+      <Grid item xs={12}>
         <CardMedia
           component="img"
           height="60px"
@@ -23,13 +22,13 @@ const FiveDaysWeatherItem = ({ day, temp, icon }) => {
         />
       </Grid>
 
-      <Grid item>
+      <Grid item xs={12}>
         <Typography color="white" variant="h6" fontWeight="700">
           {dayNamesShort[day]}
         </Typography>
       </Grid>
 
-      <Grid item>
+      <Grid item xs={12}>
         <Typography color="white" variant="h6" fontWeight="700">
           {Math.round(temp)}
           {` °C`}

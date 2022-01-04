@@ -14,7 +14,6 @@ export const weatherApi = createApi({
 
     getLocation: builder.query({
       query: (q) => {
-        console.log(q);
         return `locations/v1/cities/autocomplete?apikey=${API}&q=${q}`;
       },
 

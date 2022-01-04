@@ -15,7 +15,7 @@ const FiveDaysWeather = () => {
       <Grid container>
       {weather.days.map((day, i) => {
         return (
-          <Grid item spacing='5px' minHeight='200px' xs={2.4}>
+          <Grid key={i} item minHeight='200px' xs={2.4}>
           <FiveDaysWeatherItem
             key={i}
             day={new Date(day.Date).getDay()}

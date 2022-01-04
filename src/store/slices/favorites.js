@@ -10,14 +10,12 @@ export const favoritesSlice = createSlice({
     reducers:{
         addFavorite(state,action){
             state.items.push(action.payload);
-            console.log(state.items);
             
         },
         deleteFavorite(state, action) {
             state.items = state.items.filter((item) => {
                 return item.city !== action.payload
               })
-              console.log(state.items);
         }
     },
 }) 

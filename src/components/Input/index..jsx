@@ -8,7 +8,6 @@ import CircularIndeterminate from '../Spinner'
 import {useGetLocationQuery, useGetCurrentWeatherQuery,useGetFiveDayForecastQuery} from "../../api/weatherApi";
 import { useStyles } from "./style";
 
-
 const Input = () => {
   const classes = useStyles();
   const dispatch = useDispatch();
